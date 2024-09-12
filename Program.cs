@@ -1,9 +1,18 @@
+using Microsoft.Extensions.Options;
+using System.Data.SqlClient; 
+using System; 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+string connectionString = "Server=DESKTOP-JULIA;Database=PROD_REC;";
+
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
